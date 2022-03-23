@@ -41,8 +41,24 @@ function iconDivGenerator(icon) {
     }
     else if (icon.type === 'user') {
         i.style.color = 'blue';
-        }
+    }
     
+    
+    
+}
+
+
+function typeSelector() {
+    const selector = document.getElementById("icons");
+    selector.addEventListener('change', function () {
+        console.log('You selected: ', this.value);
+
+        if (this.value === 'all') {
+            
+        }
+    });
+
+
 }
 
 
@@ -63,6 +79,7 @@ function iconDivGenerator(icon) {
 
 
 icons.forEach((icons) => iconDivGenerator(icons));
+typeSelector();
 
 
 const filteredIconsAll = icons.filter((icon, index, array) => icon.color);
