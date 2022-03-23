@@ -28,7 +28,7 @@ function iconDivGenerator(icon) {
     
     box.innerHTML = `
         <div>
-            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.color}"></i>
+            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.color} fa-3x"></i>
         </div>
         <div>
             <span>${icon.name}</span>
