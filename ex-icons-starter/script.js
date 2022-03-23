@@ -30,8 +30,9 @@ function iconDivGenerator(icon) {
         </div>`
     
     main.appendChild(box);
+   
+    let i = box.querySelector("i");
     
-    let i = document.querySelectorAll("i");
 
     if (icon.type === 'animal') {
         i.style.color = 'orange';
