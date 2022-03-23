@@ -20,7 +20,7 @@ const main = document.querySelector('main');
 
 function iconDivGenerator(icon) {
     let box = document.createElement("div");
-   
+    
     box.innerHTML = `
         <div>
             <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.color}"></i>
@@ -54,7 +54,18 @@ function typeSelector() {
         console.log('You selected: ', this.value);
 
         if (this.value === 'all') {
+            main.innerHTML = '';
+            filteredIconsAll.forEach((icons) => iconDivGenerator(icons));
             
+        } else if (this.value === 'animal') {
+            main.innerHTML = '';
+            filteredIconsOrange.forEach((icons) => iconDivGenerator(icons));
+        } else if (this.value === 'vegetable') {
+            main.innerHTML = '';
+            filteredIconsGreen.forEach((icons) => iconDivGenerator(icons));
+        } else if (this.value === 'user') {
+            main.innerHTML = '';
+            filteredIconsBlue.forEach((icons) => iconDivGenerator(icons));
         }
     });
 
@@ -78,7 +89,7 @@ function typeSelector() {
 // }
 
 
-icons.forEach((icons) => iconDivGenerator(icons));
+
 typeSelector();
 
 
