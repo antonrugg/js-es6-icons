@@ -18,6 +18,11 @@ Come possiamo usare i dati presenti nella nostra struttura dati per creare l'ele
 
 const main = document.querySelector('main');
 
+const filteredIconsAll = icons.filter((icon, index, array) => icon.color);
+const filteredIconsOrange = icons.filter((icon, index, array) => icon.color === 'orange');
+const filteredIconsGreen = icons.filter((icon, index, array) => icon.color === 'green');
+const filteredIconsBlue = icons.filter((icon, index, array) => icon.color === 'blue');
+
 function iconDivGenerator(icon) {
     let box = document.createElement("div");
     
@@ -51,7 +56,7 @@ function iconDivGenerator(icon) {
 function typeSelector() {
     const selector = document.getElementById("icons");
     selector.addEventListener('change', function () {
-        console.log('You selected: ', this.value);
+        
 
         if (this.value === 'all') {
             main.innerHTML = '';
@@ -73,32 +78,10 @@ function typeSelector() {
 }
 
 
-// function iconColorizer() {
-//     let i = document.querySelectorAll('i');
-
-//     if (icons.type === 'animal') {
-//         i.style.color = 'orange';
-//     } else if (icons.type === 'vegetable') {
-//         i.style.color = 'green';
-//     }
-//     else {
-//         i.style.color = 'blue';
-//     }
-
-   
-// }
-
 
 
 typeSelector();
 
 
-const filteredIconsAll = icons.filter((icon, index, array) => icon.color);
-const filteredIconsOrange = icons.filter((icon, index, array) => icon.color === 'orange');
-const filteredIconsGreen = icons.filter((icon, index, array) => icon.color === 'green');
-const filteredIconsBlue = icons.filter((icon, index, array) => icon.color === 'blue');
 
-console.table(filteredIconsAll);
-console.table(filteredIconsOrange);
-console.table(filteredIconsGreen);
-console.table(filteredIconsBlue);
+
