@@ -33,12 +33,12 @@ function iconDivGenerator(icon) {
     
     let i = document.querySelectorAll("i");
 
-    if (icons.type === 'animal') {
+    if (icon.type === 'animal') {
         i.style.color = 'orange';
-    } else if (icons.type === 'vegetable') {
+    } else if (icon.type === 'vegetable') {
         i.style.color = 'green';
     }
-    else if (icons.type === 'user') {
+    else if (icon.type === 'user') {
         i.style.color = 'blue';
         }
     
