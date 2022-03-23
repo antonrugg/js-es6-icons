@@ -1,7 +1,7 @@
-console.log('js ok 2 data');
 
 
 
+let icons =
 [
 	{
 		name: 'cat',
@@ -115,4 +115,12 @@ console.log('js ok 2 data');
 		family: 'fas',
 		color: 'blue'
 	}
-];
+	];
+
+
+// const filterByColorAll = (color) => {
+// 	return icons.filter(icon => icon.color === color);
+// }
+
+
+
