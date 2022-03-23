@@ -30,7 +30,36 @@ function iconDivGenerator(icon) {
         </div>`
     
     main.appendChild(box);
+    
+    let i = document.querySelectorAll("i");
+
+    if (icons.type === 'animal') {
+        i.style.color = 'orange';
+    } else if (icons.type === 'vegetable') {
+        i.style.color = 'green';
+    }
+    else if (icons.type === 'user') {
+        i.style.color = 'blue';
+        }
+    
 }
+
+
+// function iconColorizer() {
+//     let i = document.querySelectorAll('i');
+
+//     if (icons.type === 'animal') {
+//         i.style.color = 'orange';
+//     } else if (icons.type === 'vegetable') {
+//         i.style.color = 'green';
+//     }
+//     else {
+//         i.style.color = 'blue';
+//     }
+
+   
+// }
+
 
 icons.forEach((icons) => iconDivGenerator(icons));
 
