@@ -16,8 +16,23 @@ Come possiamo usare i dati presenti nella nostra struttura dati per creare l'ele
     Inizialmente può essere sufficiente stampare dei semplici div, senza alcuno stile, con all'interno l'icona e uno span con il nome.Solamente quando la parte logica è completa, ci dedichiamo al css.
     */
 
+const main = document.querySelector('main');
 
+function iconDivGenerator(icon) {
+    let box = document.createElement("div");
+   
+    box.innerHTML = `
+        <div>
+            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.color}"></i>
+        </div>
+        <div>
+            <span>${icon.name}</span>
+        </div>`
+    
+    main.appendChild(box);
+}
 
+icons.forEach((icons) => iconDivGenerator(icons));
 
 
 const filteredIconsAll = icons.filter((icon, index, array) => icon.color);

@@ -118,9 +118,7 @@ let icons =
 	];
 
 
-// const filterByColorAll = (color) => {
-// 	return icons.filter(icon => icon.color === color);
-// }
+
 
 
 
