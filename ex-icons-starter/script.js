@@ -62,6 +62,7 @@ function typeSelector() {
             main.innerHTML = '';
             filteredIconsAll.forEach((icons) => iconDivGenerator(icons));
             
+            
         } else if (this.value === 'animal') {
             main.innerHTML = '';
             filteredIconsOrange.forEach((icons) => iconDivGenerator(icons));
@@ -76,7 +77,6 @@ function typeSelector() {
 
 
 }
-
 
 
 
