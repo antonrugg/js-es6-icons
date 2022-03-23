@@ -19,9 +19,9 @@ Come possiamo usare i dati presenti nella nostra struttura dati per creare l'ele
 const main = document.querySelector('main');
 
 const filteredIconsAll = icons.filter((icon, index, array) => icon.color);
-const filteredIconsOrange = icons.filter((icon, index, array) => icon.color === 'orange');
-const filteredIconsGreen = icons.filter((icon, index, array) => icon.color === 'green');
-const filteredIconsBlue = icons.filter((icon, index, array) => icon.color === 'blue');
+const filteredIconsOrange = icons.filter((icon, index, array) => icon.type === 'animal');
+const filteredIconsGreen = icons.filter((icon, index, array) => icon.type === 'vegetable');
+const filteredIconsBlue = icons.filter((icon, index, array) => icon.type === 'user');
 
 function iconDivGenerator(icon) {
     let box = document.createElement("div");
@@ -40,27 +40,37 @@ function iconDivGenerator(icon) {
     
 
     if (icon.type === 'animal') {
-        i.style.color = 'orange';
+        i.style.color = randomColor();
     } else if (icon.type === 'vegetable') {
-        i.style.color = 'green';
+        i.style.color = randomColor();
     }
     else if (icon.type === 'user') {
-        i.style.color = 'blue';
-    }
-    
-    
-    
+        i.style.color = randomColor();
+    }    
 }
 
 
-function typeSelector() {
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
+
+}
+
+
+
+function typeSelector(i) {
     const selector = document.getElementById("icons");
     selector.addEventListener('change', function () {
+
+        
         
 
         if (this.value === 'all') {
             main.innerHTML = '';
             filteredIconsAll.forEach((icons) => iconDivGenerator(icons));
+
             
             
         } else if (this.value === 'animal') {
@@ -77,6 +87,8 @@ function typeSelector() {
 
 
 }
+
+
 
 
 
