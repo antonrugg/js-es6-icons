@@ -7,6 +7,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: lightgray;
+    overflow: hidden;
 }
 
 #logo{
@@ -31,7 +32,8 @@ label{
 
 
 main{
-    margin-top: 1rem;
+    
+    margin: 1rem auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -39,6 +41,7 @@ main{
     column-gap: 4rem;
     row-gap: 3.5rem;
     padding-bottom: 2rem;
+    width: 95%;
     
 }
 
@@ -49,7 +52,7 @@ main > div{
     border-radius: 0.7rem;
     max-height: 300px;
     width: 16%;
-    margin-left: 0.5rem;
+    box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.88);
     
 }
 
